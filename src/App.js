@@ -4,25 +4,22 @@ import { Route } from 'react-router-dom';
 
 import SearchForm from "./components/SearchForm.js";
 import Header from "./components/Header.js";
-import Navigation from "./components/Navigation.js";
-import CharacterList from './components/CharacterList.js';
+import CharacterList from "./components/CharacterList.js";
 import WelcomePage from "./components/WelcomePage.js";
+import Navigation from "./components/Navigation.js";
 
 const HeaderStyle = styled.div`
-background-color: yellow;
+  background-color: yellow;
 `
 
 export default function App() {
   return (
     <HeaderStyle>
-    
-    <main>
     <Header />
-    <Route exact path="/" component={WelcomePage}/> 
-    <Route path="/CharacterList" component={CharacterList}/> 
-    <Route path="/SearchForm" component={SearchForm}/>  
     <Navigation />
-    </main>
+      <Route exact path="/" component={WelcomePage}/> 
+      <Route path="/CharacterList" component={CharacterList}/> 
+      <Route path="/SearchForm" component={SearchForm}/>  
     </HeaderStyle>
   );
 }
